@@ -1,0 +1,36 @@
+{
+  "name": "FrontEnd_Mentor_JobLister",
+  "version": "1.0.0",
+  "description": "Project is a skills tester from the site FrontendMentor.com example project \"Job Lister with Filtering\" Found Here https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt",
+  "main": "src/index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonkruse00/FrontEnd_Mentor_JobLister.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonkruse00/FrontEnd_Mentor_JobLister/issues"
+  },
+  "homepage": "https://github.com/jonkruse00/FrontEnd_Mentor_JobLister#readme",
+  "devDependencies": {
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
