@@ -8,5 +8,5 @@
 
 ## Checklist
 - [ ] unit test
-- [ ] accessiblity
+- [ ] accessibility
 - [ ] integration test
