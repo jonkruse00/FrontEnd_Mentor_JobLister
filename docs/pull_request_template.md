@@ -9,4 +9,3 @@
 ## Checklist
 - [ ] unit test
 - [ ] accessibility
-- [ ] integration test
