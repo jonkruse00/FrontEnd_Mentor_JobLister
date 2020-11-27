@@ -1,0 +1,63 @@
+
+@import '../color.less';
+
+.MuiPaper-root {
+  border-left-style: solid;
+  border-left-color: @primaryCyan;
+  border-left-width: 5px;
+  padding-top: 1.5em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+
+  .details {
+    .company-name {
+      color: @primaryCyan;
+      font-weight: bold;
+      margin-right: 0.5em;
+    }
+    
+    .position {
+      margin-top: 0.7em;
+      margin-bottom: 0.7em;
+    }
+
+    .select-chips {
+      .MuiChip-root {
+        color: @white;
+        font-size: 0.75em;
+        font-weight: 500;
+        font-family: 'Spartan';
+      }
+
+      .new-chip {
+        background-color: @primaryCyan;
+        margin-right: 0.7em;
+      }
+
+      .featured-chip {
+        background-color: @black;
+      }
+    }
+  }
+
+    @media screen {
+      @media (min-width: 960px) {
+        .separator {
+          display: none;
+        }
+      }
+    }
+
+  .separator {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .chips {
+    .MuiChip-root {
+      border-radius: 5%;
+      background-color: @lightCyan;
+      color: @primaryCyan;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './components/Hello';
+import Page from './components/Page';
 
-ReactDOM.render(<Hello />, document.getElementById('root'));
+import './index.less';
+
+ReactDOM.render(<Page />, document.getElementById('root'));
