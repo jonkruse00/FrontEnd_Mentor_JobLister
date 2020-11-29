@@ -1,4 +1,5 @@
 import React from 'react';
+
 import account from '../../assets/account.svg';
 import eyeCamCo from '../../assets/eye-cam-co.svg';
 import faceIt from '../../assets/face-it.svg';
@@ -10,7 +11,7 @@ import photoSnap from '../../assets/photo-snap.svg';
 import shortly from '../../assets/shortly.svg';
 import theAirFilterCompany from '../../assets/the-air-filter-company.svg';
 
-const Icons = (logoName) => {
+const Icon = (logoName) => {
   let logo = '';
   switch (logoName.split('.')[0]) {
     case 'account':
@@ -54,4 +55,4 @@ const Icons = (logoName) => {
   );
 };
 
-export default Icons;
+export default Icon;

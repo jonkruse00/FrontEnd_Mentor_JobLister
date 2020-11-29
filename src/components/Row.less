@@ -1,44 +1,105 @@
 
 @import '../color.less';
 
-.MuiPaper-root {
-  border-left-style: solid;
-  border-left-color: @primaryCyan;
-  border-left-width: 5px;
-  padding-top: 1.5em;
-  padding-right: 1em;
-  padding-bottom: 1em;
+.job {
+  .MuiPaper-root {
+    border-left-style: solid;
+    border-left-color: @primaryCyan;
+    border-left-width: 5px;
+    padding-top: 2em;
+    padding-bottom: 2em;
 
-  .details {
-    .company-name {
-      color: @primaryCyan;
-      font-weight: bold;
-      margin-right: 0.5em;
+    -webkit-box-shadow: 1px 9px 50px -25px @primaryCyan;
+    -moz-box-shadow: 1px 9px 50px -25px @primaryCyan;
+    box-shadow: 1px 9px 50px -25px @primaryCyan;
+
+    .logo {
+      svg {
+        height: 6em;
+        width: 6em;
+        margin-left: 2em;
+      }
     }
+
+    @media screen {
+      @media (max-width: 960px) {
+        .logo {
+          margin-bottom: -1.3em;
+
+          svg {
+            top: -1.5em;
+            position: relative;
+            height: 3em;
+            width: 3em;
+            margin-left: 1em;
+          }
+        }
+      }
+    }
+
+    .details {
+      padding-left: 1em;
     
-    .position {
-      margin-top: 0.7em;
-      margin-bottom: 0.7em;
+      .company-name {
+        color: @primaryCyan;
+        font-weight: bold;
+        margin-right: 0.5em;
+      }
+      
+      .position {
+        margin-top: 0.45em;
+        margin-bottom: 0em;
+      }
+
+      .select-chips {
+        .MuiChip-root {
+          color: @white;
+          font-size: 0.75em;
+          font-weight: 500;
+          font-family: 'Spartan';
+        }
+
+        .new-chip {
+          background-color: @primaryCyan;
+          margin-right: 0.7em;
+        }
+
+        .featured-chip {
+          background-color: @black;
+        }
+      }
+
+      ul.smallDetails {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        text-align : left;
+        color: @darkCyan; 
+
+        li {
+          display: inline-block;
+
+          &:after {
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            content: " \00b7";
+            font-size: x-large;
+          }
+
+          &:last-child:after {
+            content: none;
+          }
+        }
+      }
     }
 
-    .select-chips {
-      .MuiChip-root {
-        color: @white;
-        font-size: 0.75em;
-        font-weight: 500;
-        font-family: 'Spartan';
-      }
-
-      .new-chip {
-        background-color: @primaryCyan;
-        margin-right: 0.7em;
-      }
-
-      .featured-chip {
-        background-color: @black;
+    @media screen {
+      @media (min-width: 960px) {
+        .details {
+          padding-left: 3em;
+        }
       }
     }
-  }
 
     @media screen {
       @media (min-width: 960px) {
@@ -48,16 +109,30 @@
       }
     }
 
-  .separator {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    .separator {
+      margin-left: -1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .chips {
+      padding-left: 1em;
+
+      .MuiChip-root {
+        border-radius: 5%;
+        background-color: @lightCyan;
+        color: @primaryCyan;
+        font-weight: bold;
+      }
+    }
   }
 
-  .chips {
-    .MuiChip-root {
-      border-radius: 5%;
-      background-color: @lightCyan;
-      color: @primaryCyan;
+  @media screen {
+    @media (max-width: 960px) {
+      .MuiPaper-root {
+        padding-top: 0;
+        padding-bottom: 1.5em;
+      }
     }
   }
 }

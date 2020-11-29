@@ -2,12 +2,14 @@ import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 
 import Row from './Row';
+import JOB_LIST from '../const/joblist';
 
 const Page = () => (
   <Container maxWidth="lg">
-    <Grid container spacing={6} direction="column">
-      <Row />
-      <Row />
+    <Grid container spacing={4} direction="column">
+      {
+        JOB_LIST.map((job) => <Row post={job} key={job.id} />)
+      }
     </Grid>
   </Container>
 );

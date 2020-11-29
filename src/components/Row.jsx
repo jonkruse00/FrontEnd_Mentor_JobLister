@@ -3,7 +3,7 @@ import {
   Chip, Grid, Divider, Paper,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import Icons from '../Utils/Icons';
+import Icon from '../utils/Icon';
 
 import './Row.less';
 
@@ -27,12 +27,18 @@ const Row = ({ post }) => {
     <Grid item xs={12} className="job">
       <Paper>
         <Grid container>
-          <Grid item xs={12} sm={2}>
-            {Icons(logo)}
+          <Grid item xs={12} sm={1} className="logo">
+            {Icon(logo)}
           </Grid>
-          <Grid container item xs={12} md={5} className="details">
+
+          <Grid container item xs={12} md={6} className="details">
             <Grid item xs={12}>
-              <span className="company-name">{company}</span>
+              <span
+                className="company-name"
+                aria-label={company}
+              >
+                {company}
+              </span>
               <span className="select-chips">
                 {isNew
                   && (<Chip size="small" label="NEW!" className="new-chip" />)}
@@ -48,28 +54,17 @@ const Row = ({ post }) => {
                 }
               </span>
             </Grid>
+
             <Grid item xs={12}>
               <h3 className="position">{position}</h3>
             </Grid>
+
             <Grid item xs={12}>
-              <Grid container alignItems="center">
-                <Grid item xs={2}>
-                  {postedAt}
-                </Grid>
-                <Grid item xs={1}>
-                  &#8226;
-                </Grid>
-                <Grid item xs={2}>
-                  {contract}
-                </Grid>
-                <Grid item xs={1}>
-                  &#8226;
-                </Grid>
-                <Grid item xs={2}>
-                  {location}
-                </Grid>
-                <Grid item xs={4} />
-              </Grid>
+              <ul className="smallDetails">
+                <li>{postedAt}</li>
+                <li>{contract}</li>
+                <li>{location}</li>
+              </ul>
             </Grid>
             <Grid item xs={12} className="separator">
               <Divider variant="middle" />
@@ -120,18 +115,18 @@ Row.propTypes = {
 
 Row.defaultProps = {
   post: {
-    id: 1,
-    company: 'Photosnap',
-    logo: 'photo-snap.svg',
-    new: true,
-    featured: true,
-    position: 'Senior Frontend Developer',
-    role: 'Frontend',
-    level: 'Senior',
-    postedAt: '1d ago',
-    contract: 'Full Time',
-    location: 'USA Only',
-    languages: ['HTML', 'CSS', 'JavaScript'],
+    id: -1,
+    company: '',
+    logo: '',
+    new: false,
+    featured: false,
+    position: '',
+    role: '',
+    level: '',
+    postedAt: '',
+    contract: '',
+    location: '',
+    languages: [],
     tools: [],
   },
 };
