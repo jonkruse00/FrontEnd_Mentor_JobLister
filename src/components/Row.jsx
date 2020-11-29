@@ -1,8 +1,9 @@
+import React from 'react';
 import {
   Chip, Grid, Divider, Paper,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import React from 'react';
+import Icons from '../Utils/Icons';
 
 import './Row.less';
 
@@ -27,10 +28,10 @@ const Row = ({ post }) => {
       <Paper>
         <Grid container>
           <Grid item xs={12} sm={2}>
-            <img src={logo} alt={logo} />
+            {Icons(logo)}
           </Grid>
           <Grid container item xs={12} md={5} className="details">
-            <Grid xs={12}>
+            <Grid item xs={12}>
               <span className="company-name">{company}</span>
               <span className="select-chips">
                 {isNew
@@ -47,27 +48,27 @@ const Row = ({ post }) => {
                 }
               </span>
             </Grid>
-            <Grid xs={12}>
+            <Grid item xs={12}>
               <h3 className="position">{position}</h3>
             </Grid>
             <Grid item xs={12}>
               <Grid container alignItems="center">
-                <Grid xs={2}>
+                <Grid item xs={2}>
                   {postedAt}
                 </Grid>
-                <Grid xs={1}>
+                <Grid item xs={1}>
                   &#8226;
                 </Grid>
-                <Grid xs={2}>
+                <Grid item xs={2}>
                   {contract}
                 </Grid>
-                <Grid xs={1}>
+                <Grid item xs={1}>
                   &#8226;
                 </Grid>
-                <Grid xs={2}>
+                <Grid item xs={2}>
                   {location}
                 </Grid>
-                <Grid xs={4} />
+                <Grid item xs={4} />
               </Grid>
             </Grid>
             <Grid item xs={12} className="separator">
@@ -121,7 +122,7 @@ Row.defaultProps = {
   post: {
     id: 1,
     company: 'Photosnap',
-    logo: '../../assets/photo-snap.svg',
+    logo: 'photo-snap.svg',
     new: true,
     featured: true,
     position: 'Senior Frontend Developer',
