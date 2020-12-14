@@ -11,7 +11,7 @@ import photoSnap from '../../assets/photo-snap.svg';
 import shortly from '../../assets/shortly.svg';
 import theAirFilterCompany from '../../assets/the-air-filter-company.svg';
 
-const Icon = (logoName) => {
+const LogoIcon = (logoName) => {
   let logo = '';
   switch (logoName.split('.')[0]) {
     case 'account':
@@ -55,4 +55,4 @@ const Icon = (logoName) => {
   );
 };
 
-export default Icon;
+export default LogoIcon;

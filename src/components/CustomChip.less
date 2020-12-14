@@ -1,0 +1,67 @@
+@import '../color.less';
+
+// Most of this is stolen from Material UI. To make it as close to its normal chip as possible.
+.chip {
+  margin: 1em .5em;
+  background-color: @lightCyan;
+  border-radius: 5%;
+  color: @primaryCyan;
+  border: none;
+  cursor: default;
+  height: 32px;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  align-items: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  justify-content: center;
+  text-decoration: none;
+  
+  .chip-label {
+    overflow: hidden;
+    white-space: nowrap;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    padding: 0 1em;
+    font-size: 13px;
+  }
+
+  .remove-icon {
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    background-color: @primaryCyan;
+    height: 100%;
+    width: 2em; 
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @black;
+    }
+    
+    svg {
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      top: 25%;
+      height: 1em;
+    }
+  }
+}
+
+.chip.skill-chip {
+  &:hover {
+      background-color: @primaryCyan;
+      color:  @lightCyan;
+      cursor: pointer;
+    }
+}

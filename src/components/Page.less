@@ -1,0 +1,28 @@
+@import '../color.less';
+.MuiPaper-root.filter-row {
+    -webkit-box-shadow: 1px 9px 50px -25px @primaryCyan;
+    -moz-box-shadow: 1px 9px 50px -25px @primaryCyan;
+    box-shadow: 1px 9px 50px -25px @primaryCyan;
+
+  .button-wrapper {
+    text-align: center;
+
+    .MuiButton-root:hover {
+        background-color: unset;
+    }
+
+    .link-button {
+      margin: 1em;
+
+      .MuiButton-label {
+        text-transform: capitalize;
+        color:  @primaryCyan;
+
+        &:hover {
+          text-decoration: underline;  
+        }
+        
+      }
+    }
+  }
+}

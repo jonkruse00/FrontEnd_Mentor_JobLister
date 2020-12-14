@@ -3,9 +3,10 @@ import {
   Chip, Grid, Divider, Paper,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import Icon from '../utils/Icon';
+import LogoIcon from '../utils/LogoIcon';
 
 import './Row.less';
+import CustomChip from './CustomChip';
 
 const Row = ({ post }) => {
   const {
@@ -28,7 +29,7 @@ const Row = ({ post }) => {
       <Paper>
         <Grid container>
           <Grid item xs={12} sm={1} className="logo">
-            {Icon(logo)}
+            {LogoIcon(logo)}
           </Grid>
 
           <Grid container item xs={12} md={6} className="details">
@@ -76,7 +77,6 @@ const Row = ({ post }) => {
             item
             xs={12}
             md={5}
-            spacing={2}
             className="chips"
             alignItems="center"
           >
@@ -84,7 +84,7 @@ const Row = ({ post }) => {
               [role, level, ...languages, ...tools]
                 .map((chip) => (
                   <Grid item key={chip}>
-                    <Chip label={chip} />
+                    <CustomChip customClass="skill-chip" label={chip} />
                   </Grid>
                 ))
             }
